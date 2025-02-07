@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Day Invitation</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #fff;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .heart {
+            font-size: 50px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .accept {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .reject {
+            background-color: #6c757d;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You accept my Rose QT? 🌹</h1>
+        <p class="heart">❤️🌹❤️</p>
+        <div class="buttons">
+            <button class="btn accept" onclick="accepted()">Accept</button>
+            <button class="btn reject" id="rejectBtn" onmouseover="moveButton()">Reject</button>
+        </div>
+    </div>
+    
+    <script>
+        function moveButton() {
+            let btn = document.getElementById("rejectBtn");
+            let x = Math.random() * (window.innerWidth - btn.clientWidth);
+            let y = Math.random() * (window.innerHeight - btn.clientHeight);
+            btn.style.left = x + "px";
+            btn.style.top = y + "px";
+        }
+
+        function accepted() {
+            document.body.innerHTML = "<h1>Yay! HAPPY ROSE DAY! 🌹❤️</h1>";
+        }
+    </script>
+</body>
+</html>
 
